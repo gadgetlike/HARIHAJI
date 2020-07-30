@@ -1,0 +1,108 @@
+{
+  "settings": {
+    "name": "My Site",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#7f1933",
+        "successColor": "#F7ED4A",
+        "infoColor": "#ff3366",
+        "warningColor": "#c7101e",
+        "dangerColor": "#ffffff",
+        "mainFont": "Rubik",
+        "display1Font": "Rubik",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Rubik",
+        "display7Size": 1,
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#b75e0a",
+        "#41c710",
+        "#6a6a6a",
+        "#f77f0d",
+        "#c78510",
+        "#f70d1f",
+        "#c7101e"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "siteFonts": [
+      {
+        "css": "'Rubik', sans-serif",
+        "name": "Rubik",
+        "url": "https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
+      }
+    ],
+    "versionFirst": "4.7.6",
+    "uniqCompNum": 33,
+    "versionPublish": "4.12.4",
+    "imageResize": true
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-figure": {
+              "margin": "0 auto",
+              "width": "100%",
+              "display": "-webkit-flex",
+              "justify-content": "center",
+              "-webkit-justify-content": "center",
+              "img": {
+                "height": "100%",
+                "margin": "0 auto"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-figure": {
+                "img": {
+                  "width": "100% !important"
+                }
+              }
+            }
+          },
+          "_name": "header4",
+          "_customHTML": "<section class=\"header4\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"100\" step=\"5\" value=\"60\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#41c710\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"media-content col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">Selamat Hari Raya Haji</h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-white mbr-light pb-3 mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-2\">\n                    Beautiful mobile websites\n                </h3>\n                <div class=\"mbr-text align-center mbr-white pb-3\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text, .mbr-section-btn\">Hari Raya Aidiladha (bahasa Arab: عيد الأضحى 'Eid Ul-Adha), Hari Raya Korban atau Hari Raya Haji merupakan perayaan yang disambut oleh umat Islam di seluruh dunia. Perayaan ini merupakan perayaan terbesar di dalam Islam selain Aidilfitri yang disambut pada setiap 1 Syawal. Aidiladha disambut pada hari ke-10, ke-11, ke-12 dan ke-13 bulan Zulhijjah setiap tahun. Bermula dengan Takbir Aidiladha pada malam 10 Zulhijjah, diikuti dengan solat sunat Aidiladha serta khutbah Aidiladha di pagi 10 Zulhijjah, sambutan diikuti dengan ibadah korban yang boleh dilakukan sama ada pada 10, 11, 12 atau siang 13 Zulhijjah, semua waktu ini dipanggil Hari Tasyrik.\n<br>\n<br>Aidiladha ialah perayaan yang istimewa kerana ia merupakan hari untuk umat Islam memperingati kisah pengorbanan Nabi Ibrahim a.s. dalam menunaikan perintah Allah dan kesabaran anaknya Nabi Ismail a.s. dalam memenuhi perintah Allah SWT.\n<br>\n<br>Selain itu, salah satu keistimewaan Aidiladha dan Hari Tasyrik ialah ibadat korban. Ibadat korban ini hanya boleh dilakukan pada empat hari iaitu bermula waktu selepas khatib menyampaikan khutbah Aidiladha sehingga sebelum tenggelam matahari pada hari ke-13 Zulhijjah.\n<br>\n<br>Dari segi bahasa, korban bermaksud dekat, manakala dari segi istilah ia bermaksud menjalankan perintah agama atau taat kepada perintah Allah kerana ingin mendekatkan diri kepada-Nya.\n<br>\n<br>Hari Raya Korban jatuh pada hari kesepuluh pada bulan Zulhijjah, bulan terakhir dalam kalendar Hijrah Islam. 10 Zulhijjah merupakan tarikh penting dalam sejarah Islam kerana Nabi Adam dan isterinya Hawa dikeluarkan dari syurga dan diturunkan ke bumi sebelum berjumpa di padang Arafah, di luar bandar Mekah.\n<br>\n<br>Pada hari raya, orang Islam disunatkan mengenakan pakaian yang paling cantik, paling bersih dan juga mengenakan wangi-wangian. Pada pagi hari raya korban, umat Islam akan mengerjakan sembahyang sunat Hari Raya sebanyak 2 rakaat dengan 7 takbir pada rakaat pertama diikuti 5 takbir pada rakaat kedua.\n<br>\n<br>Pada kebiasaannya solat sunat Aidiladha dicepatkan sedikit berbanding solat sunat Aidilfitri. Hikmahnya dicepatkan sedikit waktu solat sunat Aidiladha adalah bagi memberi lebih banyak masa untuk penyembelihan korban. Hikmahnya dilewatkan sedikit solat sunat Aidilfitri pula adalah bagi membenarkan peluang bagi mereka yang belum membayar zakat menunaikan kewajipan mereka dan disunatkan makan dahulu sebelum pergi ke masjid. [1]\n<br>\n<br>Manakala bagi Aidiladha, hikmat disunatkan makan selepasnya supaya makanan yang mula-mula dimakan pada hari itu ialah daging korban yang berkat. Selepas bersembahyang, upacara korban akan dimulakan. Lembu, kambing dan biri-biri yang dikorbankan akan disembelih secara beramai-ramai di kawasan masjid sebelum dibahagi-bahagikan dagingnya kepada orang ramai terutamanya kepada golongan fakir miskin.\n<br>\n<br>Hari Raya Aidiladha disambut ketika umat Islam membuat penziarahan ke Mekah, mengunjung Kaabah dan melakukan korban sembelihan. Al-Quran tidak menyatakannya tetapi umat Islam memegang bahawa perayaan korban ini memperingati kesanggupan Nabi Ibrahim untuk menyerahkan anaknya sebagai korban kepada Tuhan.\n<br>\n<br>Selepas sembahyang, sekali lagi umat Islam akan berbondong-bondong melawati perkuburan orang yang disayangi. Semua orang akan memakai pakaian bersih dan ceria dan selepas itu yang muda akan memohon kemaafan daripada yang tua. Selepas itu semua orang akan menjamah pelbagai juadah yang disediakan sebelum ziarah dan menziarahi sesama mereka.\n<br></p>\n                </div>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-warning\" href=\"https://shopee.com.my/gadgetlike?smtt=0.0.9\" data-app-placeholder=\"Type Text\" target=\"_blank\">GADGETLIKE</a></div>\n            </div>\n            <div class=\"mbr-figure pt-5\">\n                <a href=\"https://shopee.com.my/gadgetlike?smtt=0.0.9\"><img src=\"@PROJECT_PATH@/assets/images/logo-1-300x300.jpg\" alt=\"Mobirise\" mbr-style=\"{'width': mediaSize + '%'}\" title></a>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s6ewsWPIOJ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header4-w"
+        }
+      ]
+    }
+  }
+}
